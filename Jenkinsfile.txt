@@ -2,9 +2,9 @@ node {
 
     checkout scm
 
-    docker.withRegistry('https://registry.hub.docker.com', 'czu002') {
+    docker.withRegistry('https://registry.hub.docker.com', 'CZU-docker-HUB') {
 
-        def customImage = docker.build("czu/dockerwebapp")
+        def customImage = docker.build("czu002/dockerwebapp")
 
         /* Push the container to the custom Registry */
         customImage.push()
